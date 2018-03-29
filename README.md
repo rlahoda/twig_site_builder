@@ -41,7 +41,8 @@ This is going to be a pretty basic look at how to set up your JSON files for thi
   "page": {
     "contenttitle": "test page"
     }
-}```
+}
+```
 To access this you would type `{{ page.contenttitle }}` in your Twig template.
 
 
@@ -67,7 +68,8 @@ To access this you would type `{{ page.contenttitle }}` in your Twig template.
       "bg2": {
         "path": "assets/img/photo2",
         "extension": ".jpg"
-      }```
+      }
+```
 - As you can see, each of these has a unique name: bg1, bg2, bg3, etc. The content inside of them, though, is consistently structures with a "path" and an "extension".
 - **Always make sure you put a comma between values! Forgetting this will cause JSON errors**
 - To access a value from the above array you can type: `{{ bgs.bg1.path }}` but that's tedious and neglects one of the many powerful features of Twig: loops.
@@ -76,7 +78,8 @@ If you create a for loop you can loop through the variables you've created:
 ```
 {% for bg in bgs %}
   <a href="{{ bg.path }}{{ bg.extension }}"></a>
-{% endfor %}```
+{% endfor %}
+```
 
 But wait, that doesn't have as many layers into it as I expected! Because when you do a loop like this, you're starting at the level that's being looped, in this case it's bg1, bg2, bg3...
 
