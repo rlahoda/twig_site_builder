@@ -13,6 +13,7 @@ This is a simple site builder template that will let you quickly and easily get 
 - Copy the contents of this repo into your folder
 - In your command line utility navigate to the folder and type "npm install" and press enter - this should install all the necessary bits that you'll need to build the site with
 - To get started type "gulp" and press enter - this will run through all of the build steps then start a webserver on your computer and pull up the index.html page on your browser. If everything worked you should see the welcome message on the page
+- To run the build process without starting a webserver type "gulp build" and press enter
 
 ### How Does This Work
 #### SASS Compiling
