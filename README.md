@@ -26,6 +26,7 @@ This is a simple site builder template that will let you quickly and easily get 
 - Create the data you want inserted into each file with a .twig.json file for the appropriate file (so index.twig would have index.twig.json)
 - Add in the variables to the Twig template using standard Twig formatting {{ variable.sub.content }}
 - The Gulp process will scan through the JSON and insert the appropriate content for each variable in your templates
+- The JSON file for the Twig template can fill any variable used in any template referenced by that template. So if you look at the index.twig file in this project you'll see that it has `{% include 'partials/header.twig' %}` so it's pulling in the header.twig file. In that file there's a variable referenced: `{{page.contenttitle}}`. There is no header.twig.json, that value is being filled by index.twig.json.
 
 #### Other File copy
 - Anything you put into the "assets", "scripts", and "vendor" folders will be copied over to the equivalent folder in the "prod" folder
@@ -36,6 +37,7 @@ This is going to be a pretty basic look at how to set up your JSON files for thi
 
 - To start with, always have an opening and closing curly bracket: `{ }`
 - You set up pairs of information with the variable name in quotes on the left, a colon, then the content for that variable on the right in quotes: `"variable": "contents"`. This would translate into `{{ variable }}` when you want to access it in your Twig template
+- **Always make sure that you have a value in your JSON for any variable in your Twig file that uses that JSON! Forgetting this will cause errors!**
 - You can nest values inside of others by enclosing them in further curly brackets:
 ```
 {
