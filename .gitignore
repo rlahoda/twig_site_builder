@@ -1,0 +1,14 @@
+# NPM Debugging Logs
+*.log
+
+# Project dependencies
+node_modules
+
+# OSX Folder Attributes
+.DS_Store
+
+# Temporary Files
+*.tmp *~
+
+# Sass Cache Files
+.sass-cache
